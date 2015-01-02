@@ -1,0 +1,71 @@
+body {
+  text-align: center; }
+
+.clearer {
+  clear: both; }
+
+h1 {
+  margin-bottom: 1.3em; }
+  h1 .btn_help {
+    font-size: 0.6em;
+    cursor: pointer;
+    color: #428bca; }
+
+.modal-body {
+  text-align: left; }
+
+.alert {
+  width: 50%;
+  margin: auto; }
+
+#rules {
+  margin-top: 1em; }
+
+.rule {
+  margin: 1px 10px;
+  padding: 10px 0;
+  position: relative;
+  clear: both;
+  text-align: left;
+  border: 1px solid transparent;
+  border-radius: 5px; }
+  .rule.invalid {
+    transition: background-color 4s, border-color 4s;
+    background-color: #f2dede;
+    border-color: #ebccd1; }
+    .rule.invalid .glyphicon-arrow-right {
+      transition: color 4s;
+      color: #ebccd1; }
+  .rule .delete_line {
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: none;
+    background: none; }
+  .rule .glyphicon-arrow-right {
+    font-size: 3em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -0.5em;
+    margin-left: -0.5em;
+    color: #f3f3f3; }
+  .rule .match, .rule .replacement {
+    width: 50%;
+    padding: 0 50px; }
+    .rule .match .value, .rule .replacement .value {
+      min-height: 5em;
+      width: 100%;
+      max-width: 100%;
+      box-shadow: rgba(0, 0, 0, 0.4) 1px 1px 5px;
+      border-radius: 5px;
+      overflow: hidden; }
+  .rule .match {
+    float: left; }
+  .rule .replacement {
+    float: right; }
+
+#controls {
+  margin-top: 2.5em; }
+  #controls #add_line {
+    font-weight: bold; }

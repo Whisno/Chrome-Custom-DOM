@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Custom DOM Options</title>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" type="image/png" href="assets/icon24.png"/>
+    <script src="assets/js/jquery-2.1.1.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <script type="text/javascript" src="options.js"></script>
+    <link rel="stylesheet" type="text/css" href="options.css">
+    <script src="assets/js/ace/ace.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <h1>Custom DOM Options
+        <sup><span data-toggle='modal' data-target='#modal_help_regexp' class='btn_help glyphicon glyphicon-question-sign'></span></sup>
+    </h1>
+    <div class="modal fade" id="modal_help_regexp">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title">About Custom DOM</h4>
+                </div>
+                <div class="modal-body">
+                    <p>This extension traverses the DOM (both static and dynamically generated). Each node for which the predicate function returns true will be passed to the handling function.</p>
+                    <p>In this page, you can write predicate and handling functions. Those functions receive one parameter, 'node', which is an <a href="https://developer.mozilla.org/docs/DOM/element">element</a>.</p>
+                    <p>As an example, you could write a predicate :<br/>
+                    <pre>return node.className === 'foo'<br/>       && node.nodeName.toLowerCase === 'span';</pre><br/>
+                    And a handler :<br/>
+                    <pre>node.remove();</pre>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="notifications"></div>
+    <div id="rules"></div>
+    <div id="controls">
+        <button id="add_line" class="btn btn-default"><span class='glyphicon glyphicon-plus'></span> Add a rule</button>
+        <button id="btn_save" class="btn btn-primary"><span class='glyphicon glyphicon-ok'></span> Save</button>
+    </div>
+</div>
+</body>
+</html>
