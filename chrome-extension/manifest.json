@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Custom DOM",
-    "version": "0.1",
+    "version": "1.0",
     "description": "Use predicates to match DOM nodes and pass them to custom functions.",
     "icons": {
         "128": "assets/icon-128.png",
